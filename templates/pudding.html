@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block content %}
+
+
+        {% if pudding %}
+            <h1>Feast on {{pudding}}!</h1>
+        {% else %}
+            <p>No sugar for you!</p>
+        {% endif %}
+{% endblock %}

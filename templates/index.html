@@ -1,0 +1,28 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>My Flask App Page</title>
+         <link rel="stylesheet" href="{{ url_for("static", filename="css/custom.css") }}">
+    </head>
+    <body>
+        {% if name %}
+            <p>Hello {{name}}!</p>
+        {% else %}
+            <p>Hello anonymous person!</p>
+        {% endif %}
+        
+        {% block content %}
+        {% endblock %}
+        
+     <p>Let’s keep in touch!</p>
+        <div id="contact-form">
+    		<form method="post" action="/confirmation">
+    		    <label for="email">Email address:</label>
+    		    <input type="email" id="email" name="email" required="required">
+    		    <input type="submit" value="Submit" name="submit" id="submit-button">
+    		</form>
+        </div>  
+    </body>
+</html>

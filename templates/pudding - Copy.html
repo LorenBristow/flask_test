@@ -1,0 +1,16 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>SUGAR</title>
+        <link rel="stylesheet" href="{{ url_for("static", filename="css/custom.css") }}">
+    </head>
+    <body>
+        {% if pudding %}
+            <h1>Feast on {{pudding}}!</h1>
+        {% else %}
+            <p>No sugar for you!</p>
+        {% endif %}
+    </body>
+</html>
